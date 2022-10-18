@@ -45,12 +45,17 @@
 	gap: 10px;
 }
 
-.namePoke,
-.namePoke::after,
-.namePoke::before,
-.namePoke:hover,
-.namePoke:link,
-.namePoke:active {
+.namePoke {
 	text-decoration: none;
 	color: black;
+	transition: 0.2s;
+}
+
+.namePoke:hover {
+	box-shadow: 10px 10px 27px 6px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 10px 10px 27px 6px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 10px 10px 27px 6px rgba(0, 0, 0, 0.75);
+	text-decoration: none;
+	color: black;
+	transition: 0.2s;
 }

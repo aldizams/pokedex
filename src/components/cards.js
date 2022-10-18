@@ -28,6 +28,7 @@ const PokeCard = (props) => {
 
 	return (
 		<Card
+			className="namePoke"
 			style={{
 				width: '20rem',
 				height: '10rem',
@@ -42,7 +43,7 @@ const PokeCard = (props) => {
 				</Col>
 				<Col>
 					<Card.Body>
-						<Card.Title className="namePoke">{Capital(props.name)}</Card.Title>
+						<Card.Title>{Capital(props.name)}</Card.Title>
 
 						{Types.map((item) => (
 							<div>

@@ -1,8 +1,8 @@
 import axios from 'axios';
 const BASE_URL = 'https://pokeapi.co/api/v2';
 
-const getPokeList = () => {
-	return axios.get(`${BASE_URL}/pokemon?limit=102&offset=0`);
+const getPokeList = (offset) => {
+	return axios.get(`${BASE_URL}/pokemon?limit=102&offset=${offset}`);
 };
 const getPokeDetail = (api) => {
 	return axios.get(api);

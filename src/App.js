@@ -1,25 +1,35 @@
-import logo from './logo.svg';
+import { Container } from 'react-bootstrap';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import { Header, PokeCard } from './components';
+import { MainPage } from './pages';
+import DetailPage from './pages/detail';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<>
+			<Container flex="sm">
+				<Header />
+
+				<Routes>
+					<Route path="/" element={<MainPage />} />
+
+					<Route path="/:PokemonName" element={<DetailPage />} />
+				</Routes>
+				<img
+					src="https://cdn-icons-png.flaticon.com/512/1752/1752776.png"
+					alt="bg"
+					style={{
+						position: 'sticky',
+						bottom: '25%',
+						zIndex: '-9999',
+						marginLeft: '30%',
+						textAlign: 'center',
+					}}
+				/>
+			</Container>
+		</>
+	);
 }
 
 export default App;
